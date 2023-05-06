@@ -13,7 +13,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "GraphPackage",
-            targets: ["GraphPackage"])
+            targets: ["GraphPackage"]),
+        .library(name: "Graph", targets: ["Graph"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,7 +25,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "GraphPackage",
-            dependencies: ["Graph"]
+            dependencies: [
+                "Graph"
+            ]
         ),
         .target(
             name: "Graph",
