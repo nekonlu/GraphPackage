@@ -11,7 +11,8 @@ let package = Package(
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(name: "Graph", targets: ["Graph"])
+        .library(name: "Graph", targets: ["Graph"]),
+        .library(name: "GraphPackage", targets: ["GraphPackage"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -28,11 +29,11 @@ let package = Package(
         ),
         .target(
             name: "Graph",
-            dependencies: [],
-            path: "./Sources/Graph"
+            dependencies: []
         ),
         .testTarget(
             name: "GraphPackageTests",
-            dependencies: ["GraphPackage"]),
+            dependencies: ["GraphPackage"]
+        ),
     ]
 )
