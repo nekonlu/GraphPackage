@@ -11,9 +11,6 @@ let package = Package(
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "GraphPackage",
-            targets: ["GraphPackage"]),
         .library(name: "Graph", targets: ["Graph"])
     ],
     dependencies: [
@@ -31,7 +28,7 @@ let package = Package(
         ),
         .target(
             name: "Graph",
-            dependencies: ["SwiftUI"],
+            dependencies: [],
             path: "./Sources/Graph"
         ),
         .testTarget(
