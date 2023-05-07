@@ -31,7 +31,7 @@ let package = Package(
         ),
         .target(
             name: "Graph",
-            dependencies: [],
+            dependencies: ["SwiftUI"],
             path: "./Sources/Graph"
         ),
         .testTarget(
